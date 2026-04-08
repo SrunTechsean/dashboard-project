@@ -42,6 +42,7 @@ picture,
 svg {
     display: block;
     max-width: 100%;
+    max-height: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
@@ -111,6 +112,11 @@ ul {
     height: 2rem;
 }
 
+.sidebar__logo {
+    width: 4rem;
+    height: 4rem;
+}
+
 /* sidebar */
 
 .sidebar,
@@ -139,6 +145,7 @@ ul {
 .sidebar__link {
     display: flex;
     gap: 1rem;
+    align-items: center;
     color: var(--color-bg-white);
     text-decoration: none;
 }
