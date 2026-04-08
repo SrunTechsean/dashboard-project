@@ -9,52 +9,66 @@
     <body>
         <div class="dashboard">
             <header class="header">
-                <div class="header__top">
-                    <div class="search">
-                        <span class="icon search__icon">?</span>
-                        <input class="search__input" type="search">
+                <div class="search">
+                    <span class="icon search__icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-search-icon lucide-search"
+                        >
+                            <title>Search</title>
+                            <path d="m21 21-4.34-4.34" />
+                            <circle cx="11" cy="11" r="8" />
+                        </svg>
+                    </span>
+                    <input class="search__input" type="search">
+                </div>
+                <div class="header__profile">
+                    <span class="icon search__icon">D</span>
+                    <div class="header__profile--small">
+                        <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 200 200"
+                            role="img"
+                            aria-labelledby="profileTitle"
+                        >
+                            <title id="profileTitle">User profile picture</title>
+                            <circle cx="100" cy="100" r="100" fill="#e2e8f0" />
+                        </svg>
                     </div>
-                    <div class="header__profile">
-                        <span class="icon search__icon">D</span>
-                        <div class="header__profile--small">
-                            <svg
-                                width="40"
-                                height="40"
-                                viewBox="0 0 200 200"
-                                role="img"
-                                aria-labelledby="profileTitle"
-                            >
-                                <title id="profileTitle">User profile picture</title>
-                                <circle cx="100" cy="100" r="100" fill="#e2e8f0" />
-                            </svg>
-                        </div>
-                        <span class="header__username--small">Morgan Oakley</span>
+                    <span class="header__username--small">Morgan Oakley</span>
+                </div>
+                <div class="header__greeting">
+                    <div class="header__profile--big">
+                        <svg
+                            width="60"
+                            height="60"
+                            viewBox="0 0 200 200"
+                            role="img"
+                            aria-labelledby="profileTitle"
+                        >
+                            <title id="profileTitle">User profile picture</title>
+                            <circle cx="100" cy="100" r="100" fill="#e2e8f0" />
+                        </svg>
+                    </div>
+
+                    <div class="header__message">
+                        <span class="header__welcome">Hi there,</span>
+                        <span class="header__username--big">Morgan Oakley</span>
                     </div>
                 </div>
-                <div class="header__down">
-                    <div class="header__user-profile">
-                        <div class="header__profile--big">
-                            <svg
-                                width="60"
-                                height="60"
-                                viewBox="0 0 200 200"
-                                role="img"
-                                aria-labelledby="profileTitle"
-                            >
-                                <title id="profileTitle">User profile picture</title>
-                                <circle cx="100" cy="100" r="100" fill="#e2e8f0" />
-                            </svg>
-                            <div class="header__message">
-                                <span class="header__welcome">Hi there,</span>
-                                <span class="header__username--big">Morgan Oakley</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header__action">
-                        <button type="button" class="btn">New</button>
-                        <button type="button" class="btn">Upload</button>
-                        <button type="button" class="btn">Share</button>
-                    </div>
+                <div class="header__action">
+                    <button type="button" class="btn">New</button>
+                    <button type="button" class="btn">Upload</button>
+                    <button type="button" class="btn">Share</button>
                 </div>
             </header>
             <aside class="sidebar">
