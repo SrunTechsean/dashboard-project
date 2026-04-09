@@ -3,6 +3,7 @@
     --color-bg-white: #fff;
     --color-bg-grey: #e2e8f0;
     --color-accent: #f0b529;
+    --paragraph-text-color: #6c6c6c;
 
     /* Text Decoration */
     --header1-font-size: 2.6rem;
@@ -86,23 +87,13 @@ ul {
         "sidebar header "
         "sidebar main ";
     grid-template-rows: 15rem 1fr;
-    grid-template-columns: clamp(12rem, 30vw, 30rem) 4fr;
+    grid-template-columns: minmax(23rem, 1fr) 4fr;
     min-height: 100vh;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: var(--color-primary);
 }
 
 .header {
     grid-area: header;
     background-color: var(--color-bg-white);
-}
-
-.main {
-    grid-area: main;
-    background-color: var(--color-bg-grey);
 }
 
 .icon {
@@ -121,7 +112,9 @@ ul {
 .sidebar__nav {
     display: flex;
     flex-direction: column;
+    grid-area: sidebar;
     gap: 3rem;
+    background-color: var(--color-primary);
 }
 
 .sidebar {
@@ -247,12 +240,15 @@ ul {
 /* Main */
 .main {
     display: grid;
+    grid-area: main;
     grid-template-areas:
         "projects announcements"
         "projects trending";
-    grid-template-rows: 1fr 1fr;
     grid-template-columns: 3fr 1fr;
-    padding-top: 2rem;
+    gap: 2rem;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: var(--color-bg-grey);
 }
 
 .projects {
@@ -270,13 +266,53 @@ ul {
 .projects__heading,
 .announcements__heading,
 .trending__heading {
+    padding-bottom: 1rem;
     font-size: var(--header2-font-size);
     font-weight: 600;
 }
 
 .projects__container {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 20rem;
+    padding: 3rem 3rem;
+    background-color: var(--color-bg-white);
+    border-radius: 1rem;
+}
+
+.card__tittle {
+    font-size: var(--header2-font-size);
+    font-weight: 600;
+}
+
+.card__content {
+    overflow-y: auto;
+    font-size: var(--paragraph-font-size);
+    font-weight: 600;
+    color: var(--paragraph-text-color);
+}
+
+.card__action {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.card__icon {
+    fill: currentColor; /* makes fill-based icons use the same color */
+    stroke: currentColor; /* ensures stroke icons also match if needed */
+    transition: color 0.5s ease;
+}
+
+.card__icon:hover,
+.card__icon:focus {
+    color: var(--color-accent);
 }
