@@ -250,6 +250,7 @@ ul {
     grid-template-areas:
         "projects announcements"
         "projects trending";
+    grid-template-rows: 36rem 1fr;
     grid-template-columns: 3fr 1fr;
     gap: 2rem;
     padding: 2rem;
