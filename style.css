@@ -331,7 +331,6 @@ ul {
 /* Anoucnement Section */
 .announcements__container,
 .trending__container {
-    flex: 1;
     overflow-y: auto;
     background-color: var(--color-bg-white);
     border-radius: 1rem;
@@ -367,14 +366,13 @@ ul {
 /* Trending Section */
 
 .trending__container {
-    display: flex;
-    align-items: center;
     height: 26rem;
     padding: 2rem;
 }
 
 .trending__list {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 2rem;
 }
