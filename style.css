@@ -88,7 +88,7 @@ ul {
         "sidebar main ";
     grid-template-rows: 15rem 1fr;
     grid-template-columns: minmax(23rem, 1fr) 4fr;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .header {
@@ -99,6 +99,7 @@ ul {
 .icon {
     width: 2rem;
     height: 2rem;
+    cursor: pointer;
 }
 
 .sidebar__logo {
@@ -284,7 +285,7 @@ ul {
     height: 20rem;
     padding: 3rem 3rem;
     background-color: var(--color-bg-white);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .card__tittle {
@@ -315,4 +316,8 @@ ul {
 .card__icon:hover,
 .card__icon:focus {
     color: var(--color-accent);
+}
+
+.card--border {
+    border-left: 6px solid var(--color-accent);
 }
