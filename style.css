@@ -185,6 +185,8 @@ ul {
 
 .search__input {
     width: clamp(35rem, 40vw, 55rem);
+    font-size: var(--header2-font-size);
+    font-weight: 500;
     appearance: none;
     background-color: var(--color-bg-grey);
     border: none;
