@@ -205,6 +205,11 @@ ul {
     font-weight: bold;
 }
 
+.profile.header__profile--greeting {
+    width: 6rem;
+    height: 6rem;
+}
+
 .header__message {
     display: flex;
     flex-direction: column;
@@ -382,4 +387,10 @@ ul {
 .trending__info {
     display: flex;
     flex-direction: column;
+}
+
+.profile {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
 }
